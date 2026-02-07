@@ -4,7 +4,7 @@ HealthPredict is a modern, AI-powered web application designed to assess the ris
 
 <img width="1792" height="1120" alt="Screenshot 2026-02-07 at 3 50 57 PM" src="https://github.com/user-attachments/assets/db0fff4e-df1d-4b21-921a-823a70d9dc8f" />
 
-Dashboard 
+Dashboard of the app
 
 
 
