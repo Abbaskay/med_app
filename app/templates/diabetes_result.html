@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}Diabetes Probability Result - HealthPredict{% endblock %}
+
+{% block nav_diabetes %}active{% endblock %}
+
+{% block content %}
+<div class="row animate-fade-in">
+    <div class="col" style="flex: 2;">
+        <div class="card text-center mb-4">
+            <h1 class="mb-4">Risk Analysis Report</h1>
+
+            <div class="result-gauge-wrapper">
+                <div class="result-gauge-arc"
+                    style="border-top-color: {% if prediction == 1 %}var(--danger){% else %}var(--success){% endif %}; transform: rotate({% if prediction == 1 %}-45deg{% else %}-135deg{% endif %});">
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <span class="result-value"
+                    style="color: {% if prediction == 1 %}var(--danger){% else %}var(--success){% endif %};">
+                    {{ (probability * 100)|round(1) }}%
+                </span>
+                <p class="text-muted">Probability of Type 2 Diabetes</p>
+            </div>
+
+            <div class="result-badge {% if prediction == 1 %}badge-danger{% else %}badge-success{% endif %}">
+                {% if prediction == 1 %}High Risk Detected{% else %}Low Risk Assessment{% endif %}
+            </div>
+
+            <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+                {% if prediction == 1 %}
+                The analysis suggests a <strong>significant risk</strong> of diabetes. Early intervention is key. We
+                strongly suggest consulting with an endocrinologist or primary care physician.
+                {% else %}
+                The analysis indicates a <strong>low risk</strong> of diabetes currently. Maintain your current healthy
+                habits to keep your risk low.
+                {% endif %}
+            </p>
+
+            <a href="/diabetes" class="btn btn-secondary mt-4">Run Another Assessment</a>
+        </div>
+    </div>
+
+    <div class="col" style="flex: 1;">
+        <div class="card mb-4">
+            <h3>Recommendations</h3>
+            <ul style="padding-left: 1.2rem; margin-bottom: 2rem;">
+                {% if prediction == 1 %}
+                <li class="mb-2"><strong>Blood Sugar Test:</strong> Get a clinical HbA1c test.</li>
+                <li class="mb-2"><strong>Dietary Changes:</strong> Reduce sugar and refined carb intake.</li>
+                <li class="mb-2"><strong>Weight Management:</strong> Aim for a healthy BMI through diet and exercise.
+                </li>
+                {% else %}
+                <li class="mb-2"><strong>Annual Checkup:</strong> Monitor glucose levels yearly.</li>
+                <li class="mb-2"><strong>Healthy Diet:</strong> Focus on whole foods and fiber.</li>
+                <li class="mb-2"><strong>Physical Activity:</strong> Stay active to improve insulin sensitivity.</li>
+                {% endif %}
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Model Insight</h3>
+            <p class="text-muted" style="font-size: 0.9rem;">
+                This prediction is based on the Pima Indians Diabetes Dataset logic, analyzing factors like Glucose,
+                BMI, Insulin, and Diabetes Pedigree Function.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

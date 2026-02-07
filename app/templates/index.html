@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}HealthPredict - AI-Powered Medical Analytics{% endblock %}
+
+{% block nav_home %}active{% endblock %}
+
+{% block content %}
+<section class="hero animate-fade-in">
+    <h1>Predict. Prevent. Protect.</h1>
+    <p>Advanced AI-driven health assessments for Heart Disease and Diabetes. Get clinical-grade risk predictions in
+        seconds.</p>
+    <div class="hero-cta">
+        <a href="#tools" class="btn btn-primary btn-lg">Start Assessment</a>
+        <a href="/about" class="btn btn-secondary btn-lg">Learn More</a>
+    </div>
+</section>
+
+<section id="tools" class="mb-5">
+    <div class="text-center mb-5">
+        <h2>Health Prediction Tools</h2>
+        <p>Select a specialized model to begin your risk assessment</p>
+    </div>
+
+    <div class="row">
+        <div class="feature-card">
+            <div class="feature-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                </svg>
+            </div>
+            <h3>Heart Disease Risk</h3>
+            <p>Analyze key cardiovascular metrics including blood pressure, cholesterol, and ECG results to predict
+                heart disease probability.</p>
+            <a href="/heart-disease" class="btn btn-primary mt-4">Check Heart Health</a>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M4.7 6.6 9 11l.9-1.2c.4-.6 1.3-.6 1.7 0l1 1.3 2.8-4.2a2 2 0 0 1 3.5.7L22 17H2l2.7-10.4a2 2 0 0 1 3.5.7Z" />
+                </svg>
+            </div>
+            <h3>Diabetes Risk</h3>
+            <p>Calculate your risk of Type 2 Diabetes based on glucose levels, insulin resistance, BMI, and other
+                physiological factors.</p>
+            <a href="/diabetes" class="btn btn-primary mt-4">Check Diabetes Risk</a>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5">
+    <div class="card">
+        <div class="row" style="align-items: center;">
+            <div>
+                <h3>How It Works</h3>
+                <p>Our platform utilizes advanced machine learning algorithms trained on thousands of verified clinical
+                    datasets.</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="color: var(--success);">✓</span> Data Collection & Preprocessing
+                    </li>
+                    <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="color: var(--success);">✓</span> Random Forest & Logistic Regression Models
+                    </li>
+                    <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="color: var(--success);">✓</span> Instant Probability Scoring
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <canvas data-chart="prediction-trends" width="400" height="250"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

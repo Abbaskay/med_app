@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}Heart Disease Probability Result - HealthPredict{% endblock %}
+
+{% block nav_heart %}active{% endblock %}
+
+{% block content %}
+<div class="row animate-fade-in">
+    <div class="col" style="flex: 2;">
+        <div class="card text-center mb-4">
+            <h1 class="mb-4">Risk Assessment Result</h1>
+
+            <div class="result-gauge-wrapper">
+                <div class="result-gauge-arc"
+                    style="border-top-color: {% if prediction == 1 %}var(--danger){% else %}var(--success){% endif %}; transform: rotate({% if prediction == 1 %}-45deg{% else %}-135deg{% endif %});">
+                </div> <!-- Simple representation, would be dynamic in production -->
+            </div>
+
+            <div class="mb-4">
+                <span class="result-value"
+                    style="color: {% if prediction == 1 %}var(--danger){% else %}var(--success){% endif %};">
+                    {{ (probability * 100)|round(1) }}%
+                </span>
+                <p class="text-muted">Probability of Heart Disease</p>
+            </div>
+
+            <div class="result-badge {% if prediction == 1 %}badge-danger{% else %}badge-success{% endif %}">
+                {% if prediction == 1 %}High Risk Detected{% else %}Low Risk Assessment{% endif %}
+            </div>
+
+            <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+                {% if prediction == 1 %}
+                Based on the provided metrics, our AI model indicates a <strong>high probability</strong> of heart
+                disease. We strongly recommend consulting a cardiologist for a thorough evaluation.
+                {% else %}
+                Our analysis indicates a <strong>low probability</strong> of heart disease at this time. However,
+                maintaining a healthy lifestyle is crucial for long-term cardiovascular health.
+                {% endif %}
+            </p>
+
+            <a href="/heart-disease" class="btn btn-secondary mt-4">Run Another Assessment</a>
+        </div>
+    </div>
+
+    <div class="col" style="flex: 1;">
+        <div class="card mb-4">
+            <h3>Recommendations</h3>
+            <ul style="padding-left: 1.2rem; margin-bottom: 2rem;">
+                {% if prediction == 1 %}
+                <li class="mb-2"><strong>Schedule a check-up:</strong> Visit a healthcare professional immediately.</li>
+                <li class="mb-2"><strong>Monitor Vitals:</strong> Keep track of blood pressure and cholesterol.</li>
+                <li class="mb-2"><strong>Lifestyle:</strong> Consider a heart-healthy diet and moderate exercise.</li>
+                {% else %}
+                <li class="mb-2"><strong>Regular Screening:</strong> Continue annual health check-ups.</li>
+                <li class="mb-2"><strong>Stay Active:</strong> accurate 150 minutes of moderate activity per week.</li>
+                <li class="mb-2"><strong>Balanced Diet:</strong> Maintain a diet rich in fruits, vegetables, and whole
+                    grains.</li>
+                {% endif %}
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Methodology</h3>
+            <p class="text-muted" style="font-size: 0.9rem;">
+                This prediction utilizes a Machine Learning model (Random Forest/Logistic Regression) trained on the
+                Cleveland Heart Disease dataset. It assesses 13 distinct clinical features to calculate risk.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

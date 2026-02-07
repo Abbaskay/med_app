@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}About - HealthPredict{% endblock %}
+
+{% block nav_about %}active{% endblock %}
+
+{% block content %}
+<div class="row animate-fade-in">
+    <div class="col" style="flex: 2;">
+        <div class="card mb-4">
+            <h1>About HealthPredict</h1>
+            <p class="lead" style="font-size: 1.2rem; color: var(--text-muted);">
+                Bridging the gap between advanced machine learning and accessible preventative healthcare.
+            </p>
+
+            <h3 class="mt-4">Our Mission</h3>
+            <p>
+                Heart disease and diabetes are among the leading causes of mortality worldwide. HealthPredict aims to
+                provide a fast, accessible, and reliable preliminary risk assessment tool powered by artificial
+                intelligence. By leveraging historical clinical data, we help users understand their risk profiles and
+                make informed health decisions.
+            </p>
+
+            <h3 class="mt-4">Disclaimer</h3>
+            <div
+                style="background-color: var(--primary-light); padding: 1.5rem; border-radius: var(--radius-md); border-left: 4px solid var(--primary);">
+                <p style="margin-bottom: 0; color: var(--primary-dark); font-weight: 500;">
+                    <strong>Important:</strong> HealthPredict is a demonstration and educational tool. It is not a
+                    substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your
+                    physician or other qualified health provider with any questions you may have regarding a medical
+                    condition.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col" style="flex: 1;">
+        <div class="card mb-4">
+            <h3>Key Features</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="color: var(--primary); font-weight: bold;">01.</span>
+                    <span>Instant Risk Analysis</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="color: var(--primary); font-weight: bold;">02.</span>
+                    <span>Secure & Private</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="color: var(--primary); font-weight: bold;">03.</span>
+                    <span>Scientifically Validated Models</span>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="color: var(--primary); font-weight: bold;">04.</span>
+                    <span>User-Friendly Interface</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Technology Stack</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                <span
+                    style="background: var(--bg-body); padding: 0.25rem 0.75rem; border-radius: 99px; border: 1px solid var(--border); font-size: 0.85rem;">Python
+                    / Flask</span>
+                <span
+                    style="background: var(--bg-body); padding: 0.25rem 0.75rem; border-radius: 99px; border: 1px solid var(--border); font-size: 0.85rem;">Scikit-learn</span>
+                <span
+                    style="background: var(--bg-body); padding: 0.25rem 0.75rem; border-radius: 99px; border: 1px solid var(--border); font-size: 0.85rem;">Pandas</span>
+                <span
+                    style="background: var(--bg-body); padding: 0.25rem 0.75rem; border-radius: 99px; border: 1px solid var(--border); font-size: 0.85rem;">HTML5
+                    / CSS3</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
