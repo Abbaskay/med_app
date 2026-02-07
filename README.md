@@ -8,7 +8,7 @@ Dashboard of the app
 
 
 
-## 🚀 Features
+##  Features
 
 -   **Heart Disease Prediction**: Analyzes 13 clinical markers (age, CP, trestbps, chol, etc.) to estimate cardiovascular risk.
 -   **Diabetes Risk Assessment**: Uses standard parameters (glucose, BMI, insulin, etc.) to predict Type 2 Diabetes probability.
@@ -18,14 +18,14 @@ Dashboard of the app
     -   Interactive risk gauges and actionable health recommendations.
 -   **Secure & Private**: All data is processed locally within the session; no personal health info is permanently stored.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 -   **Backend**: Python, Flask, Gunicorn
 -   **ML/Data**: Scikit-learn, Pandas, NumPy, Joblib
 -   **Frontend**: HTML5, CSS3 (Custom Design System), JavaScript (Chart.js for visualizations)
 -   **Deploy**: Ready for Render.com
 
-## 📦 Installation & Local Setup
+##  Installation & Local Setup
 
 1.  **Clone the repository**:
     ```bash
@@ -58,18 +58,18 @@ Dashboard of the app
 5.  **Access the app**:
     Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
 
-## 🌍 Deployment
+##  Deployment
 
 This project is configured for seamless deployment on **Render.com**.
 
 See [DEPLOY.md](DEPLOY.md) for detailed step-by-step deployment instructions.
 
-## 📊 Models & Datasets
+##  Models & Datasets
 
 -   **Heart Disease**: Trained on the [Cleveland Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/heart+disease).
 -   **Diabetes**: Trained on the [Pima Indians Diabetes Database](https://www.kaggle.com/uciml/pima-indians-diabetes-database).
 
-## 📄 License
+##  License
 
 This project is open-source and available under the [MIT License](LICENSE).
 
