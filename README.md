@@ -2,8 +2,11 @@
 
 HealthPredict is a modern, AI-powered web application designed to assess the risk of **Heart Disease** and **Diabetes**. Built with Flask and Scikit-Learn, it features a premium, responsive UI and uses machine learning models trained on clinical datasets to provide instant risk probability scores.
 
-![HealthPredict UI Dashboard](https://via.placeholder.com/800x400?text=HealthPredict+Dashboard+Preview)  
-*(Replace this placeholder with an actual screenshot of your landing page)*
+<img width="1792" height="1120" alt="Screenshot 2026-02-07 at 3 50 57 PM" src="https://github.com/user-attachments/assets/db0fff4e-df1d-4b21-921a-823a70d9dc8f" />
+
+Dashboard 
+
+
 
 ## 🚀 Features
 
