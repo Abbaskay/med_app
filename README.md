@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/Python-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-black?logo=flask)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-green)
+![Healthcare AI](https://img.shields.io/badge/Healthcare-AI-purple)
 # HealthPredict - AI Medical Risk Assessment
 
 HealthPredict is a modern, AI-powered web application designed to assess the risk of **Heart Disease** and **Diabetes**. Built with Flask and Scikit-Learn, it features a premium, responsive UI and uses machine learning models trained on clinical datasets to provide instant risk probability scores.
